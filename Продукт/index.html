@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<link rel="stylesheet" href="css/reset.css"/>
+		<link rel="stylesheet" href="css/style_preloader.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="css/jquery.parallax.css"/>
+		<link rel="stylesheet" href="css/basic.css"/>
+		<link rel="stylesheet" href="css/jquery.ui.css"/>
+		<link rel="icon" href="image/favicon.png" sizes="16x16" type="image/png"/>
+
+		<meta charset="utf-8"/>
+		<title>Промо-сайт ярмарки изделий ручной работы "Мир кожаных идей"</title>
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<script type="text/javascript" src="js/plugins/jquery.min.1.7.js"></script>
+		<script type="text/javascript" src="js/plugins/modernizr.2.5.3.min.js"></script>
+		<script src="js/plugins/jquery.parallax.js"></script><!--параллакс-->
+		<script src="js/growth.js"></script><!--popup1 папоротник-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+		<script src="js/preloader.js"></script><!--предзагрузчик и логотип-->
+		<script src="js/popup.js"></script><!--popup общий-->
+		<script src="js/roses.js"></script><!--popup2 розы-->
+		<script type="text/javascript" src="js/plugins.js"></script><!--подключение всех готовых плагинов-->
+		<script src="js/puzzle.js"></script><!--popup5 паззлы-->
+
+	</head>
+	<body>
+		<!--предзагрузчик-->
+		<div id="preloader">
+			<div class="preloader">
+				<div class="ring first"></div>
+				<div class="ring second"></div>
+				<div class="squire first"></div>
+				<div class="squire second"></div>
+				<div class="ring third"></div>
+				<img id="i1" src="image/preloader/1.png" alt="img1"/>
+				<img id="i2" src="image/preloader/2.png" alt="img2"/>
+				<img id="i3" src="image/preloader/3.png" alt="img3"/>
+				<img id="i4" src="image/preloader/4.png" alt="img4"/>
+				<img id="i5" src="image/preloader/5.png" alt="img5"/>
+				<img id="i6" src="image/preloader/6.png" alt="img6"/>
+				<img id="i7" src="image/preloader/7.png" alt="img7"/>
+				<img id="i8" src="image/preloader/8.png" alt="img8"/>
+			</div>
+		</div>
+
+		<div class="fon">
+			<audio id="player" loop>
+				<source src="audio/music3.mp3" type="audio/mp3" />
+				<!--<source src="audio/music3.ogg" type="audio/ogg" >-->
+			</audio>
+			
+			
+			<!--меню с кнопками социальных сетей, управления звуком и  основной информацией-->
+			<div class="navigation">
+				<a href="#popup3" class="navi" onclick="PopUpShow3();"><img src="image/buttons/info.png" alt="info" title="" /></a>
+				<div>
+					<button class="navi" onclick="changeVolume(0.1, 'up')"><img src="image/buttons/plus.png" alt="play" title="Увеличить громкость" /></button>
+					<button class="navi"><img src="image/buttons/play.png" alt="play" title="" /></button>
+					<button class="navi" onclick="changeVolume(0.1, 'down')"><img src="image/buttons/minus.png" alt="pause" title="Уменьшить громкость"/></button>
+				</div>
+			</div>
+
+			<div class="nadpisi">Потяните за край страницы или кликнете - тайны и откроются!</div>
+			<div class="fire" id="fire1"></div>
+			<div class="fire" id="fire2"></div>
+		</div>
+
+		<!-- popup0 (открывается кнопкой "info")-->
+		<div class="popup" id="popup3">
+			<div class="popup-content"></div>
+			<div class="info">
+				<div>
+					<h3 class="nadpisi">Выставка-ярмарка изделий ручной<br> работы "Мир кожаных идей"</h3>
+					<h4>Место проведения:</h4>
+					<p>Музей истории белорусского кино</p>
+					<p>г. Минск, ул. Свердлова, 4, в 100 метрах от Красного костёла</p>
+					<h4>Дата проведения:</h4>
+					<p>19-24 сентября 2017г.</p>
+					<h4>Время работы: </h4>
+					<p>вторник – пятница: 11.00 – 20.00, суббота – воскресенье: 11.00 – 19.00</p>
+					<h4>Вход свободный</h4>
+					<h4>Тел. для справок: </h4>
+					<p>+375-17-322-05-37 / +375-44-783-07-61</p>
+				</div>
+			</div>
+			<a href="#popup3" class="xxx">
+				<span class="icon">&#206;</span>
+			</a>
+		</div>
+
+		<!-- книга (оформление согласно плагину)-->
+		<div class="flipbook-viewport">
+			<div class="container">
+				<div class="flipbook">
+					<div class="hard" id="logotip" style="background-image:url(image/pages/cover2.jpg)"><img id="logotip2" src="image/gif_swf/logoGif.gif" alt="logotip"/></div>
+					<div class="hard" style="background-image:url(image/pages/back.jpg)"></div>
+					<div style="background-image:url(image/pages/paper2.jpg)"><div class="nadpisi">Добро пожаловать <br>в Мир Творчества!</div></div>
+
+					<div style="background-image:url(image/pages/paper.jpg)"><div class="nadpisi"> Найдите свою счастливую "Папараць-кветку" </div></div>
+					<div style="background-image:url(image/pages/paper2.jpg)"><a href="#popup1" ><img src="image/image1.jpg" alt="picture"  onclick="PopUpShow1();"/></a></div>
+
+					<div style="background-image:url(image/pages/paper.jpg)"><div class="nadpisi">Соберите букет из роз! </div></div>
+					<div style="background-image:url(image/pages/paper2.jpg)" ><a href="#popup2" ><img src="image/image2.png" alt="flower" onclick="PopUpShow2();" /></a></div>
+
+					<div style="background-image:url(image/pages/paper.jpg)"><div class="nadpisi">Получите удовольствие от белорусского народного творчества</div></div>
+					<div style="background-image:url(image/pages/paper2.jpg)"><a href="#popup4" ><img src="image/image4.png" alt="people" onclick="PopUpShow4();"/></a></div>
+
+					<div style="background-image:url(image/pages/paper.jpg)"><div class="nadpisi">Сыграйте с нами и получите приятный бонус </div></div>
+					<div style="background-image:url(image/pages/paper2.jpg)"><a href="#popup5" ><img src="image/image5.jpg" alt="puzzle" onclick="PopUpShow5();"/></a></div>
+
+					<div style="background-image:url(image/pages/paper.jpg)"><div class="nadpisi">Спасибо за проявленный интерес</div></div>
+					<div class="hard" style="background-image:url(image/pages/back.jpg)"></div>
+					<div class="hard" style="background-image:url(image/pages/coverback2.jpg )" onmouseover="rounding(event);"><div class="theEnd"><p>Приглашаем Вас </p><p> посетить выставку-ярмарку</p> <p>"Мир кожаных идей".</p> <p>Вас ждут творческие мастер-классы,</p> <p>концерты живой музыки,</p> <p>выступления фольклорного ансамбля "Крыж"</p><p>множество эксклюзивных изделий из кожи ручной рабо</p><p>19-24 сентября, г. Минск, ул. Свердлова, 4</p></div><button id="begin" onclick="back();">Вернуться в начало</button></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- popup1 (открывается кликом по картине "Купалье")-->
+		<div class="popup" id="popup1">
+			<div class="popup-content">
+				<h3 class="zadanie">Нажмите мышкой на повляющийся цветок</h3>
+				<div id="port">
+					<div id="circle1"></div>
+					<div id="circle2"></div>
+					<div id="circle3"></div>
+					<div id="circle4"></div>
+					<div id="circle5"></div>
+					<div id="circle6"></div>
+					<h2>Окунитесь в сказку, посетив выставку-ярмарку изделий ручной работы "Мир кожаных идей"!</h2>
+					<!-- слои с изображениями для параллакса-->
+					<img class="parallax-layer" src="image/parallax/parallax6.png" alt="parallax-layer6" style="width:890px; height:640px;	pointer-events: none;"/>
+					<img class="parallax-layer" src="image/parallax/parallax5.png" alt="parallax-layer5" style="width:920px; height:640px;	pointer-events: none;"/>
+					<img class="parallax-layer" src="image/parallax/parallax4.gif" alt="parallax-layer4" style="width:940px; height:660px;	pointer-events: none;"/>
+					<img id="kvetka" class="pulse" src="image/parallax/parallax7.png" alt="flower" onclick="growth();"/>
+					<img class="parallax-layer" src="image/parallax/parallax3.png" alt="parallax-layer3" style="width:960px; height:680px;	pointer-events: none;"/>
+					<img class="parallax-layer" src="image/parallax/parallax2.png" alt="parallax-layer2" style="width:980px; height:690px;	pointer-events: none;"/>
+					<img class="parallax-layer" src="image/parallax/parallax1.png" alt="parallax-layer1" style="width:1000px; height:700px;	pointer-events: none;"/>
+				</div>
+			</div>
+			<a href="#popup1" class="xxx">
+				<span class="icon">&#206;</span>
+			</a>
+		</div>
+
+		<!-- popup2 (открывается кликом по цветку)-->
+		<div class="popup" id="popup2">
+			<div class="popup-content">
+				<h3 class="zadanie">Каждый цветок скрывает свою тайну!</h3>
+				<img class="arka" src="image/flowers/arka3.png" alt="arka" />
+				<h2>Вас ждут мастер-классы по изготовлению кожаных аксессуаров!</h2>
+			</div>
+			<a href="#popup2" class="xxx" onclick="vozvrat();">
+				<span class="icon">&#206;</span>
+			</a>
+		</div>
+
+		<!-- popup4 (открывается кликом по изображению с вазами в народных костюмах)-->
+		<div class="popup" id="popup4">
+			<h3 class="zadanie" >Нажмите на кнопку и погрузитесь в самобытность белорусского танца!</h3>
+			<div class="popup-content">
+				<!--подключение iframe через jquery-->
+			</div>
+			<h2 class="firstText">Ежедневно посетителей выставки ждут выступления народного ансамбля "Крыж"!</h2>
+			<a href="#popup4" class="xxx">
+				<span class="icon">&#206;</span>
+			</a>
+		</div>
+
+		<!-- popup5 (открывается кликом по картине "Осень")-->
+		<div class="popup" id="popup5">
+			<div class="popup-content">
+				<h3 class="zadanie">Выберите картинку для игры</h3>
+				<h3 id="promo">Промо-код отправлен</h3>
+				<!--изображения, предлагаемые для игры "Паззлы"-->
+				<div class="preview">
+					<img id="puzzle1" src="image/puzzle1/puzzle1.jpg" alt="puzzle1" title="winter"/>
+					<img id="puzzle2" src="image/puzzle2/puzzle2.jpg" alt="puzzle2" title="spring"/>
+					<img id="puzzle3" src="image/puzzle3/puzzle3.jpg" alt="puzzle3" title="summer"/>
+					<img id="puzzle4" src="image/puzzle4/puzzle4.jpg" alt="puzzle4" title="autumn"/>
+				</div>
+				<!--блок с перемешанными паззлами"-->
+				<div class="puzzlebox">
+					<div class="photo" id="drag1"></div>
+					<div class="photo" id="drag2"></div>
+					<div class="photo" id="drag3"></div>
+					<div class="photo" id="drag4"></div>
+					<div class="photo" id="drag5"></div>
+					<div class="photo" id="drag6"></div>
+					<div class="photo" id="drag7"></div>
+					<div class="photo" id="drag8"></div>
+					<div class="photo" id="drag9"></div>
+				</div>
+				<!--блок для складывания паззла-->
+				<div class="puzzlebox">
+					<div class="target" id="drop1"></div>
+					<div class="target" id="drop2"></div>
+					<div class="target" id="drop3"></div>
+					<div class="target" id="drop4"></div>
+					<div class="target" id="drop5"></div>
+					<div class="target" id="drop6"></div>
+					<div class="target" id="drop7"></div>
+					<div class="target" id="drop8"></div>
+					<div class="target" id="drop9"></div>
+				</div>
+				<h2>Поздравляем! Вы получаете возможность приобрести любое изделие, представленное на выставке, со скидкой 20%! Для получения промо-кода введите свой e-mail:</h2>
+				<!--форма ввода адреса электронной почты-->
+				<form name="skidka" novalidate onsubmit="return get20(this);" target="myIFR">
+					<input type="email" name="myemail" id="myemail" placeholder="Введите e-mail"/>
+					<input type="submit" id="submit" value="Получить скидку"/>
+				</form>
+			</div>
+			<a href="#popup5" class="xxx" onclick="sbros();">
+				<span class="icon">&#206;</span>
+			</a>
+
+		</div>
+
+		<footer>
+			<p>© 2017-2018 mki.by |Копирование материалов сайта без указания обратной ссылки запрещено| Music by <a href="https://soundcloud.com/alexander_shcherbin">Alex_SHCH </a> |
+			<a href="http://www.vk.com/id6404266" class="seti">&#230;</a><a href="https://www.pinterest.com/irina_shche/" class="seti">&#237;</a><a href="http://www.ok.ru/profile/122152887380" class="seti">&#233;</a></p>
+		</footer>
+
+		<iframe name="myIFR" style="display: none"></iframe><!--для того, чтобы при отправке email, страница не обновлялась -->
+		<!-- Enable png transparency in IE6 -->
+		<!--[if lt IE 7]>
+		<script type="text/javascript" src="js/jquery.ifixpng.js"></script>
+		<script type="text/javascript">jQuery(document).ready(function(){ jQuery("img[src$='png']".ifixpng(); });</script>
+		<![endif]-->
+		<script src="js/music.js" async></script>	
+
+	</body>
+</html>
